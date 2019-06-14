@@ -1,0 +1,32 @@
+{
+  "name": "puppeteer-commander",
+  "description": "Human friendly scenario runner for Puppeteer",
+  "version": "0.0.0",
+  "author": "Konstantin Bychkov <k.bychkov@yandex.ru>",
+  "license": "MIT",
+  "keywords": [
+    "puppeteer",
+    "automation",
+    "browser",
+    "testing",
+    "end-to-end"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kbychkov/puppeteer-commander.git"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  },
+  "dependencies": {
+    "puppeteer": "^1.17.0"
+  }
+}
