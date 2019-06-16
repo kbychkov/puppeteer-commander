@@ -12,6 +12,9 @@
     "end-to-end"
   ],
   "main": "index.js",
+  "files": [
+    "/lib"
+  ],
   "scripts": {
     "test": "mocha"
   },
