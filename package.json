@@ -1,7 +1,7 @@
 {
   "name": "puppeteer-commander",
   "description": "Human friendly scenario runner for Puppeteer",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Konstantin Bychkov <k.bychkov@yandex.ru>",
   "license": "MIT",
   "keywords": [
@@ -16,7 +16,8 @@
     "/lib"
   ],
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.1.4"
+    "mocha": "^6.1.4",
+    "standard-version": "^6.0.1"
   },
   "dependencies": {
     "puppeteer": "^1.17.0"
