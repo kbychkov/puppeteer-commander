@@ -33,4 +33,28 @@ describe('Command', () => {
       expect(await page.title()).to.equal('Home page');
     });
   });
+
+  describe('checkbox', () => {
+    beforeEach(async () => {
+      await page.goto('http://localhost:8000/checkbox.html');
+    });
+
+    it('should check checkbox', async () => {
+      const command = new Command(page);
+
+      expect(await page.$eval('#cb1', el => el.checked)).to.equal(false, 'Initial state should be unchecked');
+      const result = await command.checkboxCheck('#cb1');
+      expect(result).to.equal(true, 'Result should be true');
+      expect(await page.$eval('#cb1', el => el.checked)).to.equal(true, 'Next state should be checked');
+    });
+
+    it('should uncheck checkbox', async () => {
+      const command = new Command(page);
+
+      expect(await page.$eval('#cb2', el => el.checked)).to.equal(true, 'Initial state should be checked');
+      const result = await command.checkboxUncheck('#cb2');
+      expect(result).to.equal(true, 'Result should be true');
+      expect(await page.$eval('#cb2', el => el.checked)).to.equal(false, 'Next state should be unchecked');
+    });
+  });
 });
